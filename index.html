@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Virtual IFC Araquari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hud">
+        <div>
+          <p class="eyebrow">Tour Virtual Imersivo</p>
+          <h1>IFC Campus Araquari</h1>
+        </div>
+        <button id="openHistory" class="ghost">História do Campus</button>
+      </header>
+
+      <section class="viewport" aria-label="Corredor virtual em primeira pessoa">
+        <div class="crosshair" aria-hidden="true"></div>
+        <div id="scene" class="scene"></div>
+
+        <aside class="navigator">
+          <h2>Escolha um ambiente</h2>
+          <div id="roomButtons" class="room-buttons"></div>
+          <p class="hint">Dica: use ← → para caminhar no corredor.</p>
+        </aside>
+      </section>
+
+      <section class="info-panel" id="infoPanel" aria-live="polite"></section>
+    </main>
+
+    <dialog id="historyDialog">
+      <article>
+        <h2>Linha do tempo do IFC Araquari</h2>
+        <ul id="historyTimeline"></ul>
+        <button id="closeHistory" class="ghost">Fechar</button>
+      </article>
+    </dialog>
+
+    <template id="roomCardTemplate">
+      <button class="room-btn">
+        <span class="label"></span>
+        <span class="meta"></span>
+      </button>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
